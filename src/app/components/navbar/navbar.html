@@ -1,0 +1,41 @@
+<nav class="navbar" [class.is-scrolled]="isScrolled()">
+  <div class="container navbar-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">TP</span>
+      <span class="brand-name">Taylor Page</span>
+    </a>
+
+    <ul class="nav-links">
+      @for (link of links; track link.id) {
+        <li>
+          <a [href]="'#' + link.id" [class.active]="activeSection() === link.id">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+
+    <div class="navbar-actions">
+      <a class="btn btn-ghost resume-btn" href="mailto:hello@taylorpage.dev">Let's talk</a>
+      <button
+        type="button"
+        class="menu-toggle"
+        [class.is-open]="isMenuOpen()"
+        (click)="toggleMenu()"
+        aria-label="Toggle navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" [class.is-open]="isMenuOpen()">
+    <ul>
+      @for (link of links; track link.id) {
+        <li>
+          <a [href]="'#' + link.id" (click)="closeMenu()">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+  </div>
+</nav>

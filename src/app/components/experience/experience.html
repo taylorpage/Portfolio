@@ -1,0 +1,35 @@
+<section id="experience" class="section experience">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <span class="section-index">04</span>
+      <h2>Experience</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <div class="timeline">
+      @for (item of items; track item.company) {
+        <div class="timeline-item" appReveal>
+          <div class="timeline-marker">
+            <span class="timeline-dot"></span>
+          </div>
+
+          <div class="timeline-content glass">
+            <div class="timeline-heading">
+              <div>
+                <h3>{{ item.role }}</h3>
+                <span class="company">{{ item.company }}</span>
+              </div>
+              <span class="period chip">{{ item.period }}</span>
+            </div>
+
+            <ul class="points">
+              @for (point of item.points; track point) {
+                <li>{{ point }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

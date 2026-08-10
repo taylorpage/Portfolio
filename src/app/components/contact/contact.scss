@@ -1,0 +1,52 @@
+.contact {
+  padding-bottom: clamp(5rem, 10vw, 8rem);
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.contact-glow {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 220px;
+  background: var(--gradient);
+  filter: blur(90px);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.contact-card {
+  .eyebrow {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    position: relative;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  .contact-copy {
+    position: relative;
+    max-width: 480px;
+    margin: 1.25rem auto 2.25rem;
+    color: var(--text-secondary);
+  }
+}
+
+.contact-actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}

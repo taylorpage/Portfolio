@@ -1,0 +1,55 @@
+<section id="about" class="section about">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <span class="section-index">01</span>
+      <h2>About</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-copy" appReveal>
+        <p>
+          I'm a software engineer who enjoys turning ambiguous problems into
+          clean, reliable products. I've spent the last several years
+          working across the stack — from component libraries and
+          state management on the frontend, to APIs and infrastructure on
+          the backend.
+        </p>
+        <p>
+          I care about developer experience as much as user experience:
+          readable code, fast feedback loops, and systems that are a
+          pleasure to maintain. Lately I've been deep in Angular's signals
+          APIs, TypeScript tooling, and exploring where React fits into a
+          modern component ecosystem.
+        </p>
+        <p>
+          When I'm not shipping features, I'm usually tinkering with a side
+          project, reading about system design, or refining this very
+          portfolio.
+        </p>
+
+        <div class="about-stats">
+          @for (stat of stats; track stat.label) {
+            <div class="stat">
+              <span class="stat-value gradient-text">{{ stat.value }}</span>
+              <span class="stat-label">{{ stat.label }}</span>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="about-card glass" appReveal>
+        <div class="card-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <pre><code><span class="tok-kw">const</span> <span class="tok-var">engineer</span> = &#123;
+  <span class="tok-key">name</span>: <span class="tok-str">'Taylor Page'</span>,
+  <span class="tok-key">role</span>: <span class="tok-str">'Software Engineer'</span>,
+  <span class="tok-key">focus</span>: [<span class="tok-str">'Angular'</span>, <span class="tok-str">'TypeScript'</span>, <span class="tok-str">'React'</span>],
+  <span class="tok-key">loves</span>: [<span class="tok-str">'clean architecture'</span>, <span class="tok-str">'DX'</span>],
+  <span class="tok-key">currentlyLearning</span>: <span class="tok-str">'signals &amp; SSR'</span>,
+&#125;;</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
