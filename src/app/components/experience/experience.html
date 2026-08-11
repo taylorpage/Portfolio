@@ -1,0 +1,32 @@
+<section id="experience" class="section experience">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <span class="section-index">04</span>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="experience-list">
+      @for (item of items; track item.company) {
+        <article class="experience-row" [class.current]="item.current" appReveal>
+          <span class="period">{{ item.period }}</span>
+
+          <div class="experience-main">
+            <div class="experience-heading">
+              <h3>{{ item.role }}</h3>
+              @if (item.current) {
+                <span class="tag">Current</span>
+              }
+            </div>
+            <span class="company">{{ item.company }}</span>
+
+            <ul class="points">
+              @for (point of item.points; track point) {
+                <li>{{ point }}</li>
+              }
+            </ul>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

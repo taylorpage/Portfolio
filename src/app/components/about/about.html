@@ -1,0 +1,46 @@
+<section id="about" class="section about">
+  <div class="container about-grid">
+    <div class="section-head" appReveal>
+      <span class="section-index">01</span>
+      <h2>About</h2>
+    </div>
+
+    <div class="about-content">
+      <p class="about-lede" appReveal>
+        I'm a full stack engineer who specializes in scalable React
+        applications, data visualization, and modern product engineering.
+      </p>
+
+      <div class="about-copy" appReveal>
+        <p>
+          I started out with a B.A. in Music before retraining as an
+          engineer through Hack Reactor's immersive program in 2016 —
+          which left me with an unusual amount of patience for iterating
+          on details until they feel right. Since then I've worked across
+          startups and enterprise environments, from building an
+          e-commerce platform and partner APIs at ForeverCar, to
+          contributing to JPMorgan Chase's internal design system, to
+          running my own consultancy delivering full-stack products for
+          clients like Carvana and Q2 Banking.
+        </p>
+        <p>
+          Today I'm a Senior UI Software Engineer at Publicis Media,
+          where I lead frontend development on a React + TypeScript media
+          analytics platform and build tooling that integrates AI-assisted
+          workflows into everyday engineering. Outside of work, I've been
+          applying that same AI-assisted approach to a personal project:
+          designing real-time audio DSP plugins in C++ and Swift.
+        </p>
+      </div>
+
+      <dl class="about-stats" appReveal>
+        @for (stat of stats; track stat.label) {
+          <div class="stat">
+            <dt class="stat-label">{{ stat.label }}</dt>
+            <dd class="stat-value">{{ stat.value }}</dd>
+          </div>
+        }
+      </dl>
+    </div>
+  </div>
+</section>
