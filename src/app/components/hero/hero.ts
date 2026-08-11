@@ -10,13 +10,13 @@ import { RevealDirective } from '../../shared/reveal.directive';
 })
 export class Hero {
   protected readonly ticker: string[] = [
-    'Angular',
-    'TypeScript',
     'React',
+    'TypeScript',
+    'Angular',
+    'Vue',
     'Node.js',
-    'RxJS',
-    'PostgreSQL',
-    'Docker',
-    'AWS',
+    'Django',
+    'Python',
+    'REST APIs',
   ];
 }

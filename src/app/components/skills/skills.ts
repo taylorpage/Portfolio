@@ -17,19 +17,19 @@ export class Skills {
   protected readonly groups: SkillGroup[] = [
     {
       title: 'Languages',
-      items: ['TypeScript', 'JavaScript', 'HTML & CSS', 'SQL', 'Python'],
+      items: ['JavaScript (ES6+)', 'TypeScript', 'Python'],
     },
     {
-      title: 'Frameworks',
-      items: ['Angular', 'React', 'Node.js', 'Express', 'RxJS'],
+      title: 'Frontend',
+      items: ['React', 'Redux', 'Vue', 'Angular', 'HTML5', 'CSS3'],
     },
     {
-      title: 'Tools',
-      items: ['Git', 'Docker', 'Vite', 'Jest / Vitest', 'Figma'],
+      title: 'Backend',
+      items: ['Node.js', 'Django', 'REST APIs'],
     },
     {
-      title: 'Cloud & Infra',
-      items: ['AWS', 'Vercel', 'CI/CD', 'PostgreSQL', 'Redis'],
+      title: 'Tools & Platforms',
+      items: ['Git', 'Copilot', 'Codex', 'Claude', 'Agile / Scrum'],
     },
   ];
 }

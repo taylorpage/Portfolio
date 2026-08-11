@@ -15,9 +15,9 @@ interface Stat {
 })
 export class About {
   protected readonly stats: Stat[] = [
-    { value: '5+', label: 'Years experience' },
-    { value: '30+', label: 'Projects shipped' },
-    { value: '8', label: 'Teams collaborated with' },
+    { value: '10+', label: 'Years experience' },
+    { value: '4', label: 'Companies & teams' },
+    { value: '2', label: 'DSP plugins shipped' },
     { value: '∞', label: 'Cups of coffee' },
   ];
 }
