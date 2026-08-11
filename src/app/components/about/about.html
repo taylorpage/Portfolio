@@ -1,0 +1,41 @@
+<section id="about" class="section about">
+  <div class="container about-grid">
+    <div class="section-head" appReveal>
+      <span class="section-index">01</span>
+      <h2>About</h2>
+    </div>
+
+    <div class="about-content">
+      <p class="about-lede" appReveal>
+        I'm a software engineer who enjoys turning ambiguous problems into
+        clean, reliable products.
+      </p>
+
+      <div class="about-copy" appReveal>
+        <p>
+          I've spent the last several years working across the stack —
+          from component libraries and state management on the frontend,
+          to APIs and infrastructure on the backend. I care about
+          developer experience as much as user experience: readable code,
+          fast feedback loops, and systems that are a pleasure to
+          maintain.
+        </p>
+        <p>
+          Lately I've been deep in Angular's signals APIs, TypeScript
+          tooling, and exploring where React fits into a modern component
+          ecosystem. When I'm not shipping features, I'm usually
+          tinkering with a side project or reading about system design.
+        </p>
+      </div>
+
+      <dl class="about-stats" appReveal>
+        @for (stat of stats; track stat.label) {
+          <div class="stat">
+            <dt class="stat-label">{{ stat.label }}</dt>
+            <dd class="stat-value">{{ stat.value }}</dd>
+          </div>
+        }
+      </dl>
+    </div>
+  </div>
+</section>

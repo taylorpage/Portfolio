@@ -1,0 +1,48 @@
+<section id="projects" class="section projects">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <span class="section-index">03</span>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="projects-list">
+      @for (project of projects; track project.title) {
+        <article class="project-row" [class.featured]="project.featured" appReveal>
+          <span class="project-number">{{ project.index }}</span>
+
+          <div class="project-main">
+            <div class="project-heading">
+              <h3>{{ project.title }}</h3>
+              @if (project.featured) {
+                <span class="tag featured-tag">Featured</span>
+              }
+            </div>
+            <p>{{ project.description }}</p>
+            <ul class="project-tags">
+              @for (tag of project.tags; track tag) {
+                <li class="tag">{{ tag }}</li>
+              }
+            </ul>
+          </div>
+
+          <div class="project-links">
+            @if (project.liveUrl) {
+              <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer" class="btn-text">
+                Live
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path d="M14 4h6v6M20 4 10 14M6 4H4v16h16v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            }
+            <a [href]="project.repoUrl" target="_blank" rel="noopener noreferrer" class="btn-text">
+              Code
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
