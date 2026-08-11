@@ -10,8 +10,19 @@
         <div class="skill-row" appReveal>
           <span class="skill-title">{{ group.title }}</span>
           <ul class="skill-items">
-            @for (item of group.items; track item) {
-              <li class="tag">{{ item }}</li>
+            @for (item of group.items; track item.label) {
+              <li class="tag">
+                @if (item.icon) {
+                  <svg
+                    class="tag-icon"
+                    viewBox="0 0 24 24"
+                    [style.color]="item.icon.color ?? 'var(--text)'"
+                  >
+                    <path [attr.d]="item.icon.d" fill="currentColor" />
+                  </svg>
+                }
+                {{ item.label }}
+              </li>
             }
           </ul>
         </div>

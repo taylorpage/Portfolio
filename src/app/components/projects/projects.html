@@ -20,8 +20,15 @@
             <span class="project-context">{{ project.context }}</span>
             <p>{{ project.description }}</p>
             <ul class="project-tags">
-              @for (tag of project.tags; track tag) {
-                <li class="tag">{{ tag }}</li>
+              @for (tag of project.tags; track tag.label) {
+                <li class="tag">
+                  @if (tag.icon) {
+                    <svg class="tag-icon" viewBox="0 0 24 24" [style.color]="tag.icon.color ?? 'var(--text)'">
+                      <path [attr.d]="tag.icon.d" fill="currentColor" />
+                    </svg>
+                  }
+                  {{ tag.label }}
+                </li>
               }
             </ul>
           </div>

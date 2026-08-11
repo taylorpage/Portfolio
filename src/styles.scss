@@ -235,6 +235,13 @@ button {
   border: 1px solid rgba(var(--accent-rgb), 0.16);
 }
 
+.tag-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 0.45rem;
+  flex-shrink: 0;
+}
+
 /* Scroll-reveal */
 [appReveal] {
   opacity: 0;

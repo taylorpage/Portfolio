@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
 
 import { RevealDirective } from '../../shared/reveal.directive';
+import { TECH_ICONS } from '../../shared/tech-icons';
+
+interface SkillItem {
+  label: string;
+  icon?: (typeof TECH_ICONS)[string];
+}
 
 interface SkillGroup {
   title: string;
-  items: string[];
+  items: SkillItem[];
+}
+
+function skill(label: string): SkillItem {
+  return { label, icon: TECH_ICONS[label] };
 }
 
 @Component({
@@ -17,19 +27,34 @@ export class Skills {
   protected readonly groups: SkillGroup[] = [
     {
       title: 'Languages',
-      items: ['JavaScript (ES6+)', 'TypeScript', 'Python'],
+      items: [skill('JavaScript (ES6+)'), skill('TypeScript'), skill('Python')],
     },
     {
       title: 'Frontend',
-      items: ['React', 'Redux', 'Vue', 'Angular', 'HTML5', 'CSS3'],
+      items: [
+        skill('React'),
+        skill('Redux'),
+        skill('Angular'),
+        skill('NgRx'),
+        skill('Vue'),
+        { label: 'Vuex' },
+        skill('HTML5'),
+        skill('CSS3'),
+      ],
     },
     {
       title: 'Backend',
-      items: ['Node.js', 'Django', 'REST APIs'],
+      items: [skill('Node.js'), skill('Django'), { label: 'REST APIs' }],
     },
     {
       title: 'Tools & Platforms',
-      items: ['Git', 'Copilot', 'Codex', 'Claude', 'Agile / Scrum'],
+      items: [
+        skill('Git'),
+        skill('Copilot'),
+        { label: 'Codex' },
+        skill('Claude'),
+        { label: 'Agile / Scrum' },
+      ],
     },
   ];
 }

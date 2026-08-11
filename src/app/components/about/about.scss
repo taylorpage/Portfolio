@@ -47,7 +47,8 @@
 .about-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 3rem 0 0;
+  margin: 3rem 0 0 -1.25rem;
+  width: calc(100% + 1.25rem);
   border-top: 1px solid var(--line);
 
   @media (max-width: 640px) {
@@ -56,7 +57,7 @@
 }
 
 .stat {
-  padding: 1.5rem 1.5rem 0 0;
+  padding: 1.5rem 1.25rem 0;
 
   &:not(:last-child) {
     border-right: 1px solid var(--line);
