@@ -13,10 +13,18 @@ export class Hero {
     'React',
     'TypeScript',
     'Angular',
+    'NgRx',
     'Vue',
     'Node.js',
     'Django',
     'Python',
+    'HTML5',
+    'CSS3',
+    'JavaScript (ES6+)',
+    'Git',
+    'Redux',
+    'C++',
+    'Swift',
     'REST APIs',
   ];
 }

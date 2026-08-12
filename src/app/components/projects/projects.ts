@@ -52,11 +52,11 @@ export class Projects {
     },
     {
       index: '02',
-      title: 'Media Analytics Platform',
-      context: 'Publicis Media',
+      title: 'Angular Portfolio',
+      context: 'Personal project · 2026',
       description:
-        'Led frontend development of a media analytics platform that lets stakeholders visualize campaign performance and optimize media spend decisions in real time.',
-      tags: tags(['React', 'TypeScript', 'Data Visualization']),
+        'Built this portfolio in Angular to demonstrate real experience after feedback that I needed more Angular work — a cheeky way to show both the project and the motivation behind it.',
+      tags: tags(['Angular', 'TypeScript', 'Web Design']),
     },
     {
       index: '03',
