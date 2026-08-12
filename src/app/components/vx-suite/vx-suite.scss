@@ -1,0 +1,128 @@
+:host {
+  display: block;
+}
+
+.vx-suite {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(77, 124, 254, 0.16), rgba(10, 12, 18, 0.95));
+  border-top: none;
+  padding: clamp(5rem, 8vw, 9rem) 0;
+  margin-top: -1px;
+}
+
+.vx-suite-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 1fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.vx-suite-copy {
+  padding: 2rem 0;
+}
+
+.vx-suite-copy .eyebrow {
+  display: inline-flex;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.vx-suite-copy h2 {
+  font-size: clamp(2.2rem, 3.2vw, 3.4rem);
+  margin: 1rem 0 1.5rem;
+  max-width: 38rem;
+}
+
+.vx-suite-copy p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 44rem;
+  margin-bottom: 2rem;
+}
+
+.vx-suite-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.vx-suite-feature-grid article {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.75rem;
+}
+
+.vx-suite-feature-grid h3 {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.vx-suite-feature-grid ul {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.vx-suite-feature-grid li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--text-secondary);
+}
+
+.vx-suite-feature-grid li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.vx-suite-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.vx-suite-media {
+  display: flex;
+  justify-content: center;
+}
+
+.vx-suite-media-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.vx-suite-media-grid img {
+  width: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 960px) {
+  .vx-suite-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .vx-suite-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
