@@ -8,6 +8,11 @@ interface ProjectTag {
   icon?: (typeof TECH_ICONS)[string];
 }
 
+interface ProjectImage {
+  src: string;
+  alt: string;
+}
+
 interface Project {
   index: string;
   title: string;
@@ -17,6 +22,7 @@ interface Project {
   featured?: boolean;
   repoUrl?: string;
   liveUrl?: string;
+  images?: ProjectImage[];
 }
 
 function tags(labels: string[]): ProjectTag[] {
@@ -39,6 +45,10 @@ export class Projects {
         'Two production-ready vocal audio plugins with custom DSP algorithms for character compression and stereo widening, built with AI-assisted workflows to prototype and refine plugin behavior.',
       tags: tags(['C++', 'Swift', 'DSP', 'AI-assisted']),
       featured: true,
+      images: [
+        { src: 'assets/vx-atom.png', alt: 'VX-Atom plugin interface' },
+        { src: 'assets/vx-fission.png', alt: 'VX-Fission plugin interface' },
+      ],
     },
     {
       index: '02',
@@ -63,6 +73,9 @@ export class Projects {
       description:
         'Led development of a new Angular-based e-commerce experience backed by a scalable Django/Python REST API, then designed v2.0 of the public Partner API for managing vehicles, leads, and quotes.',
       tags: tags(['Angular', 'Python', 'Django', 'REST APIs']),
+      images: [
+        { src: 'assets/forevercar.jpg', alt: 'ForeverCar quote customization on desktop and mobile' },
+      ],
     },
     {
       index: '05',

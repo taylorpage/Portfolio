@@ -33,6 +33,14 @@
             </ul>
           </div>
 
+          @if (project.images) {
+            <div class="project-media">
+              @for (image of project.images; track image.src) {
+                <img [src]="image.src" [alt]="image.alt" class="project-media-item" loading="lazy" />
+              }
+            </div>
+          }
+
           @if (project.liveUrl || project.repoUrl) {
             <div class="project-links">
               @if (project.liveUrl) {

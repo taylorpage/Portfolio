@@ -8,7 +8,20 @@
     <div class="experience-list">
       @for (item of items; track item.company) {
         <article class="experience-row" [class.current]="item.current" appReveal>
-          <span class="period">{{ item.period }}</span>
+          <div class="experience-meta">
+            <div class="experience-avatar">
+              @if (item.logo.image) {
+                <img [src]="item.logo.image" [alt]="item.company + ' logo'" />
+              } @else if (item.logo.icon) {
+                <svg viewBox="0 0 24 24" [style.color]="item.logo.icon.color">
+                  <path [attr.d]="item.logo.icon.d" fill="currentColor" />
+                </svg>
+              } @else {
+                <span class="avatar-initials">{{ item.logo.initials }}</span>
+              }
+            </div>
+            <span class="period">{{ item.period }}</span>
+          </div>
 
           <div class="experience-main">
             <div class="experience-heading">
