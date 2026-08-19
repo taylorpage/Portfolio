@@ -33,6 +33,7 @@ export class Skills {
       title: 'Frontend',
       items: [
         skill('React'),
+        skill('Next.js'),
         skill('Redux'),
         skill('Angular'),
         skill('NgRx'),

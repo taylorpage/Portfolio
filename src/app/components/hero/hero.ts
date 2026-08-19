@@ -11,6 +11,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
 export class Hero {
   protected readonly ticker: string[] = [
     'React',
+    'Next.js',
     'TypeScript',
     'Angular',
     'NgRx',
